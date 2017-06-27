@@ -6,9 +6,11 @@ https://www.npmjs.com/package/background-changer
 - HTML must be rendered before package can be executed
 
 - From terminal
+
 `npm install background-changer`
 
 - From code
 
   `import changer from 'background-changer'`
+  
   `changer.start()`
