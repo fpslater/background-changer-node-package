@@ -38,18 +38,6 @@ function render(rgb) {
   document.body.style.backgroundColor = getCss(rgb);
 }
 
-function start() {
-  var rgb = {},
-      delay = 1000,
-      repetitions = 10;
-
-  function changeBackground() {
-    render(generateNewRGB(rgb));
-  }
-
-  setIntervalX(changeBackground, delay, repetitions);
-}
-
 exports.start = function() {
   var rgb = {},
       delay = 1000,
