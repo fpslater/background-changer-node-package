@@ -9,5 +9,5 @@ https://www.npmjs.com/package/background-changer
 `npm install background-changer`
 
 - From code
-`import changer from 'background-changer'`
+`import changer from 'background-changer'`  
 `changer.start()`
