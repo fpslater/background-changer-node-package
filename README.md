@@ -5,11 +5,11 @@ https://www.npmjs.com/package/background-changer
 - Node must be installed
 - HTML must be rendered before package can be executed
 
-- From terminal
+- In terminal
 
 `npm install background-changer`
 
-- From code
+- In code
 
 `import changer from 'background-changer'`
   
