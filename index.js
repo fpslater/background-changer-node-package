@@ -4,19 +4,21 @@ function randomIntFromInterval(min,max) {
 
 function getRandomRgb() {
   var min = 0,
-      max = 255;
-  return {
-    r: randomIntFromInterval(min, max),
-    g: randomIntFromInterval(min, max),
-    b: randomIntFromInterval(min, max)
-  }
+      max = 255,
+      rgb = {
+        r: randomIntFromInterval(min, max),
+        g: randomIntFromInterval(min, max),
+        b: randomIntFromInterval(min, max)
+  };
+  return 'rgb('+rgb.r+', '+rgb.g+', '+rgb.b+')';
 }
 
-function generateNewRGB(rgb) {
+function generateNewRGB(rgbList) {
   var newRgb = getRandomRgb();
-  while(JSON.stringify(rgb) === JSON.stringify(newRgb)) {
+  while(rgbList.indexOf(newRgb) > 0) {
     newRgb = getRandomRgb();
   }
+  rgbList.push(newRgb);
   return newRgb;
 }
 
@@ -31,20 +33,16 @@ function setIntervalX(callback, delay, repetitions) {
 }
 
 function render(rgb) {
-  function getCss(rgb) {
-    return 'rgb('+rgb.r+', '+rgb.g+', '+rgb.b+')';
-  }
-
-  document.body.style.backgroundColor = getCss(rgb);
+  document.body.style.backgroundColor = rgb;
 }
 
 exports.start = function() {
-  var rgb = {},
+  var rgbList = [],
       delay = 1000,
       repetitions = 10;
 
   function changeBackground() {
-    render(generateNewRGB(rgb));
+    render(generateNewRGB(rgbList));
   }
 
   setIntervalX(changeBackground, delay, repetitions);
