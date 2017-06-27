@@ -11,6 +11,6 @@ https://www.npmjs.com/package/background-changer
 
 - From code
 
-  `import changer from 'background-changer'`
+`import changer from 'background-changer'`
   
-  `changer.start()`
+`changer.start()`
