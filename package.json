@@ -1,0 +1,11 @@
+{
+  "name": "background-changer",
+  "version": "0.9.1",
+  "description": "call .start() function to change the background to random colors for 10 seconds",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Forrest Slater (forrest.slater@gmail.com)",
+  "license": "ISC"
+}
