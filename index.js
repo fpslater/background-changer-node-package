@@ -15,10 +15,10 @@ function getRandomRgb() {
 
 function generateNewRGB(rgbList) {
   var newRgb = getRandomRgb();
-  while(rgbList.indexOf(newRgb) > 0) {
+  while(rgbList[newRgb]) {
     newRgb = getRandomRgb();
   }
-  rgbList.push(newRgb);
+  rgbList[newRgb] = true;
   return newRgb;
 }
 
@@ -37,7 +37,7 @@ function render(rgb) {
 }
 
 exports.start = function() {
-  var rgbList = [],
+  var rgbList = {},
       delay = 1000,
       repetitions = 10;
 
